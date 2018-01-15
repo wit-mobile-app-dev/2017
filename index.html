@@ -1,0 +1,1774 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+  
+<header class="ui center aligned middle aligned stackable grid segment">
+
+  
+    
+  <a class="ui blue left corner label">
+    <div id="showTOC" class="popup" data-content="Reveal TOC">
+      <i id="toc" class="sitemap big  icon"></i>
+    </div>
+  </a>
+
+  
+
+  <div class="two wide column">
+    <i class="huge  icon"></i></a>
+  </div>
+
+
+  <div class="ui six wide column">
+    <h2> Android Application Development </h2>
+    <div class="ui tiny blue label">
+      <a href="mailto:ddrohan@wit.ie">David Drohan</a> & <a href="mailto:sdrohan@wit.ie">Dr. Siobhan Drohan</a> & <a href="mailto:edeleastar@wit.ie">Eamonn de Leastar</a> & John Fitzgerald, <a href="http:/www.wit.ie"> WIT </a>
+    </div>
+  </div>
+
+  <div class="ui two wide column">
+    
+      
+  <div class="two wide column sitemap">
+    <div class="popup" data-content="To the Programm home...">
+      <a href="https://wit-mobile-app-dev.github.io"> <i class="huge grid layout icon"></i> <br> Programme </a>
+    </div>
+  </div>
+
+    
+  </div>
+
+
+    
+  
+
+
+
+  <div class="three wide column">
+    
+      
+  <div class="ui equal width center aligned grid segment">
+    
+      
+        <div class="column">
+          <div class="popup" data-content="All talk's in Course">
+            <a href="talkwall.html"> <i class="big object group icon"></i> </a>
+            <div class="ui blue mini circular label">
+              51
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="column">
+          <div class="popup" data-content="All lab's in Course">
+            <a href="labwall.html"> <i class="big lab icon"></i> </a>
+            <div class="ui blue mini circular label">
+              29
+            </div>
+          </div>
+        </div>
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+
+    
+    
+  </div>
+
+</header>
+
+  
+
+
+
+  <div class="ui pushable">
+    <div class="ui inverted inline vertical sidebar menu">
+      
+        <div class="header">
+          <a class="item" href="topic00/index.html">
+            Assignments
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic00/talk-1-assignment-1/assignment-1.pdf">
+                Assignment-1 </a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic00/talk-2-assignment-2/assignment-2.pdf">
+                Assignment-2 </a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic01/index.html">
+            1: Overview & Tools
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic01/talk-1-module-overview/a-module-overview.pdf">
+                Module Overview</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic01/talk-2-app-design/b-app-design.pdf">
+                App Design</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic01/talk-3-android-overview/c-android-overview.pdf">
+                Android Overview</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic01/talk-4-ui-overview/d-ui-overview.pdf">
+                Android UX</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic01/talk-5-first-android-app/e-first-android-app.pdf">
+                Donation 01 Application</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic01/book-a-donation-01/index.html">
+                Donation-01</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic02-a/index.html">
+            2-a: Activities & Layouts
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic02-a/talk-1-app-ui-structure/a-app-structure.pdf">
+                Application Structure</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic02-a/talk-2-donation-02/b-donation-android-v2.pdf">
+                Donation - Android V2</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic02-a/talk-3-donation-03/c-donation-android-v3-requirements.pdf">
+                Donation - Android V3</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic02-a/talk-4-donation-models/d-models.pdf">
+                Donation - Models</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic02-a/book-a-donation-02/index.html">
+                Donation-02</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic02-b/index.html">
+            2-b: Activities & Layouts
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic02-b/talk-1-donation-03/a-donation-android-v3.pdf">
+                Donation Android V3</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic02-b/book-a-donation-03/index.html">
+                Donation-03</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic03-a/index.html">
+            3-a: Navigation & App Structure
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic03-a/talk-1-myrent-00/a-myrent-v00.pdf">
+                MyRent V00</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic03-a/talk-2-myrent-01/b-myrent-v01.pdf">
+                MyRent V01</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic03-a/book-a-solutions-donation-03/index.html">
+                Donation-03-Solutions</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic03-a/book-b-myrent-00 (Baseline)/index.html">
+                MyRent-00 (Baseline)</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic03-a/book-c-myrent-01 (Widgets)/index.html">
+                MyRent-01 (Widgets)</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic03-b/index.html">
+            3-b: Platform & Events
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic03-b/talk-1-myrent-02/a-myrent-01-02.pdf">
+                MyRent02</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic03-b/talk-2-event-handling/b-event-handling.pdf">
+                Event Handling</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic03-b/book-a-myrent-02 (Listview)/index.html">
+                MyRent-02 (Listview)</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic03-b/book-b-event-handling/index.html">
+                Event-Handling</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic03-b/reference-3/c-android-stack.pdf">
+                The Android Stack</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic04-a/index.html">
+            4-a: Navigation & Lifecycles
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic04-a/talk-1-navigation-within-apps/a-navigation-within-apps.pdf">
+                Navigation Principles I</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic04-a/talk-2-activities/b-activities-basics.pdf">
+                Activities Fundamentals </a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+                MyRent-03 (Action Bar & Dialogs)</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic04-a/book-b-myrent-04-fileIO/index.html">
+                MyRent-04 (FileIO)</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic04-a/reference-1-navigation/a-app-structure.pdf">
+                Application Structure</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic04-b/index.html">
+            4-b: Navigation (Up button) & Lambda Expressions
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic04-b/talk-1-up-support/a-up-support-myrent.pdf">
+                Up Support</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic04-b/talk-2-more-navigation/b-navigation-into-apps.pdf">
+                Navigation into Apps</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic04-b/book-a-myrent-05 (Up Button)/index.html">
+                MyRent-05 (Up Button)</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic04-b/book-b-java-8/index.html">
+                Lambda Expressions</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic04-b/book-c-event-handler-soln/index.html">
+                Event-Handling-Solution</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic05-a/index.html">
+            5-a (SUPPLEMENTAL): Persistence & Communication
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic05-a/talk-2-file-formats/b-file-formats.pdf">
+                File Formats</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic05-a/talk-3-fileio-in-myrent/d-fileio-in-myrent.pdf">
+                File IO in MyRent</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic05-a/talk-4-permissions/permissions.pdf">
+                System permisions</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+                MyRent-06 (Contact & Email)</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic05-a/book-b-permissions/index.html">
+                MyRent-06a (Permissions)</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic05-b/index.html">
+            5-b (SUPPLEMENTAL): Fragments
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic05-b/talk-1-fragments/ba-android_fragments.pdf">
+                Fragments</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic05-b/book-a-myrent-07 (Fragments)/index.html">
+                MyRent-07 (Fragments)</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic05-b/book-b-twopane/index.html">
+                Two Pane</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic06-a/index.html">
+            6-a (SUPPLEMENTAL): Deletion & ViewPager
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic06-a/talk-1-deletion/deletion.pdf">
+                Deletion</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic06-a/talk-2-viewpager/bb-android_viewpager.pdf">
+                ViewPager</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic06-a/book-a-myrent-08 (Deletion)/index.html">
+                MyRent-08 (Deletion)</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+                MyRent-09 (ViewPager)</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic06-b/index.html">
+            6-b (SUPPLEMENTAL): Settings
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic06-b/talk-1-settings/settings.pdf">
+                Settings</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic06-b/book-a-settings/index.html">
+                MyRent-10 (Settings)</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic07-a/index.html">
+            7-a: UI Design 1 & App Structure
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic07-a/talk-1-ui-design-1/01.ui.design.1.pdf">
+                UI Design - Part 1</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic07-a/book-coffeemate-lab-02/index.html">
+                Lab-03</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic07-b/index.html">
+            7-b: UI Design 2
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic07-b/talk-2-ui-design-2/01.ui.design.2.pdf">
+                UI Design - Part 2</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic07-b/book-coffeemate-lab-03/index.html">
+                Lab-04</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic08-a/index.html">
+            8: Multithreading & Networking
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic08-a/talk-1-networking-1/01.networking.1.pdf">
+                Networking with Volley</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic08-a/talk-2-networking-2/json.pdf">
+                Recap on JSON</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic08-a/book-coffeemate-lab-04/index.html">
+                Lab-05</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic09-a/index.html">
+            9: Google Services
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic09-a/talk-1-google-1/01.google. signin.pdf">
+                01.google. signin</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic09-a/talk-2-google-2/01.location.pdf">
+                Google Location Services </a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic09-a/talk-3-google-3/01.maps.pdf">
+                Google Maps</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic09-a/book-coffeemate-lab-05/index.html">
+                Lab-06</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic09-a/book-coffeemate-lab-06/index.html">
+                Lab-07</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic10-a/index.html">
+            10: Firebase
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-1-intro/intro.pdf">
+                Firebase Intro</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-2-database/database.pdf">
+                Firebase Database</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-3-authentication/authentication.pdf">
+                Firebase Authentication</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-4-storage/storage.pdf">
+                Firebase Storage</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-5-hosting/hosting.pdf">
+                Firebase Hosting</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-6-config/config.pdf">
+                Remote Config</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-7-crashreporting/crash.pdf">
+                Crash Reporting</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-8-messaging/messaging.pdf">
+                Cloud Messaging</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-9-testlab/testlab.pdf">
+                Test Lab</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/talk-99-extras/extras.pdf">
+                Firebase Extras</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic10-a/book-coffeemate-lab-07/index.html">
+                Lab-08</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic11/index.html">
+            11: Android Rest Client
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic11/talk-donation-android/donation-android-rest.pdf">
+                Donation Android</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic11/book-android-client/index.html">
+                Lab-Android 2</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic12/index.html">
+            12: Secure Android Rest Client
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic12/talk-01-secure-android/secure-android.pdf">
+                Securing the Android Client API</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic12/talk-02-full-stack/full-stack.pdf">
+                 Full Stack Evolution</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic12/talk-03-project/project.pdf">
+                Project Briefing</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic12/book-secure-android/index.html">
+                Lab-Android 3</a>
+            </div>
+          
+        </div>
+      
+        <div class="header">
+          <a class="item" href="topic13/index.html">
+            13: Services
+          </a>
+        </div>
+        <div class="menu">
+          
+            <div class="menu">
+              <a class="item" href="topic13/talk-1-services/services.pdf">
+                Auto-refresh cache</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic13/talk-2-manual/services_manual.pdf">
+                Manual-refresh cache</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic13/talk-3-receivers/receivers.pdf">
+                BroadcastReceiver</a>
+            </div>
+          
+            <div class="menu">
+              <a class="item" href="topic13/book-b-services/index.html">
+                MyRent-14 (Services)</a>
+            </div>
+          
+        </div>
+      
+    </div>
+    <div class="pusher">
+      <div class="ui raised stackable segment container">
+        <div class="ui blue left ribbon large label"> Topics </div>
+        <div class="ui centered four doubling stackable cards">
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> Assignments</div>
+
+  </div>
+
+  <a href=
+  
+    "topic00/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic00/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Specification for the course assignments.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 1: Overview & Tools</div>
+
+  </div>
+
+  <a href=
+  
+    "topic01/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic01/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Android introduced a new user interface language to the world, one that is gradually evolving in flexibility and expressiveness. The first application we will build exhibits range of new concepts you will not have come across before. Here we tour this app in detail, exploring each of the artifacts we have composed, and attempt to get a sense of how they fit together to form a running app.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 2-a: Activities & Layouts</div>
+
+  </div>
+
+  <a href=
+  
+    "topic02-a/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic02-a/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Android, like IOS, has introduced a new visual language for interaction on the devices it supports. This language is different from previous graphical environments (Windows, OSX), and is optimised for touch based interaction. In the second version of the donation app we start to get a sense of this language and the programming paradigms to support it.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 2-b: Activities & Layouts</div>
+
+  </div>
+
+  <a href=
+  
+    "topic02-b/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic02-b/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>We continue developing the Donation app, providing solutions to the exercises set in the previous lab. Additional widgets are introduced as well as a model class and simple authentication.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 3-a: Navigation & App Structure</div>
+
+  </div>
+
+  <a href=
+  
+    "topic03-a/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic03-a/talk-1-myrent-00/a-myrent-v00.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>This first application is already composed of a range of classes related to each other in via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app. We then move on to a new app though which we will explore the major features of the SDK.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 3-b: Platform & Events</div>
+
+  </div>
+
+  <a href=
+  
+    "topic03-b/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic03-b/talk-1-myrent-02/a-myrent-01-02.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Android is a sophisticated, multi-layered operating system encompassing a wide range of features, capabilities and components. This is organised into a &#39;Stack&#39;, whereby each layer communicates with the layer immediately below. Here we review this stack and briefly examine the primary components at each layer. We also press on with exploring the SDK.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 4-a: Navigation & Lifecycles</div>
+
+  </div>
+
+  <a href=
+  
+    "topic04-a/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic04-a/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>The Activity is at the heart of almost all android applications. You have already experience in designing and implementing a number of simple ones. Here we review the general nature of activities and define the principle the concerns of the programmer has to bear in mind. In particular, we review navigation principles in Android and the visual language that it provides.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 4-b: Navigation (Up button) & Lambda Expressions</div>
+
+  </div>
+
+  <a href=
+  
+    "topic04-b/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic04-b/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>We conclude our treatment of navigation with instructions on how to implement the up button. We also briefly explore some of the features newly introduced in Java 8, in particular lambdas, the implementation of which we demonstrate with some simple examples.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 5-a (SUPPLEMENTAL): Persistence & Communication</div>
+
+  </div>
+
+  <a href=
+  
+    "topic05-a/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic05-a/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>We review the file I/O implemented previously where we incorporated a serialization mechanism to write Java objects to a Json file format. This required some significant enhancements to the models package, including a completely new Serializer class. Experience is provided in the use of implicit intents in two new features which facilitate selecting a contact from the phone&#39;s contact lists and sending an email to the selected user.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 5-b (SUPPLEMENTAL): Fragments</div>
+
+  </div>
+
+  <a href=
+  
+    "topic05-b/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic05-b/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Modern Android Activities tend to be composed of one or more Fragments - as opposed to consisting of a single layout. This introduces a slightly more complicated creation process. However, using fragments opens up other opportunities we will explore in later labs.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 6-a (SUPPLEMENTAL): Deletion & ViewPager</div>
+
+  </div>
+
+  <a href=
+  
+    "topic06-a/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic06-a/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Two new features are introduced - the ability to delete a subset of the list view and the ability to swipe horizontally in either direction and display each details view in turn.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 6-b (SUPPLEMENTAL): Settings</div>
+
+  </div>
+
+  <a href=
+  
+    "topic06-b/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic06-b/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Our application allows storage of configuration data in the form key-value pairs. Menu access is provided to a layout that allows input of credentials and other settings that will be used later when cloud access capability is added. We avail of a number of Android types such as the PreferenceFragment class and SharedPreference interface.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 7-a: UI Design 1 & App Structure</div>
+
+  </div>
+
+  <a href=
+  
+    "topic07-a/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic07-a/topic.jpg">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Here we discuss app design in general, the frameworks available to the app developer and the different approaches that can be followed in the design and development of a mobile app. We begin with some of the more common widgets used in the design of android apps, focusing on the android UI guidelines for effective navigation.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 7-b: UI Design 2</div>
+
+  </div>
+
+  <a href=
+  
+    "topic07-b/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic07-b/topic.jpg">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Here we cover some of the more advanced UI artifacts used in the design of android apps, specifically the Navigation Drawer while continuing to focus on the android UI guidelines for effective navigation.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 8: Multithreading & Networking</div>
+
+  </div>
+
+  <a href=
+  
+    "topic08-a/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic08-a/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>In this section we take a brief look at persistence within an Android app (via SQLite) but focus mainly on how the Android OS implements multithreading and deals with running tasks in the background. We also investigate the different approaches available to the developer for making http calls and API requests.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 9: Google Services</div>
+
+  </div>
+
+  <a href=
+  
+    "topic09-a/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic09-a/topic.jpg">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Google Services is a layer of services Android apps can use. This includes location services, google sign-in, cloud, contacts, maps etc. Here we focus on just 3 of the services - Google Sign-in, Location and Maps.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 10: Firebase</div>
+
+  </div>
+
+  <a href=
+  
+    "topic10-a/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic10-a/topic.gif">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Firebase is a Backend-as-a-Service — BaaS — that began as a startup and grew into a next-generation app-development platform on Google Cloud Platform. Here we look at the main services provided by the platform and ultimately build our CoffeeMate app with Firebase support.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 11: Android Rest Client</div>
+
+  </div>
+
+  <a href=
+  
+    "topic11/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic11/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Using the java classes already built using retrofit, enable the donation android app with the facility to access the donation web API.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 12: Secure Android Rest Client</div>
+
+  </div>
+
+  <a href=
+  
+    "topic12/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic12/topic.jpg">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>Explore how our JWT security mechansim can be incorporated into the android client</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+            
+
+<div class="ui  raised link  card">
+
+
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge  sitemap 
+    icon"></i></div>
+    <div class="header"> 13: Services</div>
+
+  </div>
+
+  <a href=
+  
+    "topic13/index.html">
+  
+
+    
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic13/topic.png">
+      </div>
+    
+    </a>
+
+
+    
+      
+      
+    
+      
+        
+      
+
+    
+    
+
+    <div class="center aligned content">
+      <div class="description">
+        <p>A service is an application component that can perform a background task. A receiver is a component that allows registration for system or application events. We use both as a means of automatically refreshing cache data from the service. A BroadcastReceiver listens for a particular intent, sent either in response to booting the device or when our application starts. It then sets an alarm that triggers the refresh service at either default or user-define intervals. We also demonstrate how to manually refresh data by making a direct call to service.</p>
+
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+    
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
